@@ -9,23 +9,21 @@ import { useState } from 'react';
 
 function App() {
   const [show, setShow] = useState(false)
+  const openModal=()=>setShow(true)
+  const closeModal = ()=> setShow(false)
  
   return (
 
-    <div className="App">
-       
+    <div className="App">       
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
-      
+        </p>      
         <button onClick={() => {
-          setShow(!show);
-          console.log(show)
+          openModal();   
          
-        }}> Click</button><Modal show={show} fontSize="17" showContainer="true"/>
-        
+        }}> Click</button><Modal show={show} close={closeModal}  text="L'employé a été correctement enregistré"  fontSize="17" showContainer="true"/>        
       </header>
     </div>
   );

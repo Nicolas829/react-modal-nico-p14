@@ -17,6 +17,7 @@ flex-direction:${(item) => item.flexDirection};
 align-items:${(item) => item.alignItems};
 box-shadow:${(item) => item.boxShadow};
 color:${(item) => item.color};
+opacity:${(item) => item.opacity};
 position:absolute  ;   
    `
 

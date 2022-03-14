@@ -1,4 +1,11 @@
-# Documentation
+
+# information
+customizable Modal for react with close button 
+
+## installation 
+npm react-modal-nico-p14
+
+### Documentation
 
 IMPORTANT :
 
@@ -7,20 +14,30 @@ const [show, setShow]=useState(false)
 const openModal= ()=> setShow(true)
 const closeModal=()=> setShow(false)
 
-
-width            width of the container = half of window width by default
-height           height of the container = half of window height by default
-position         position of the container = absolute by default
+img              img of modal (checked img by default)
+show             show or not show modal (bolean)          
+width            width of the container = tierce of window width by default
+height           height of the container =  window height/2.1 by default
+left             position on x (center responsive by default)
+top              position on y (center responsive by default)
 bg               choose your bg = white by default
-top              position of your container on y= 10% of height
-left             position of your container on x=center by default
-borderRadius     border-radius= none by defatul
+text             text modal   
+justifyContent   about the container, space-around by default
+borderRadius     border-radius= 150px by default
+display          flex by default
+alignitems       center by default
+flexDirection    column by default
+opacity          0.8 by default
+boxShadow       about the container
+fontSize        text sier
+color           text color
 
-    
+  
+   
+   
+   
+   
 
-    //const ModalText
-Text                type your information
-fontSize           "em" = 1 by default
-color               "black" by default
+   
              
    

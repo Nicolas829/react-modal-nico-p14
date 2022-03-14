@@ -26,8 +26,9 @@ function Modal(_ref) {
     title,
     img,
     width = window.innerWidth / 3,
-    height = window.innerHeight / 2,
-    left,
+    height = window.innerHeight / 2.1,
+    left = (window.innerWidth - width) / 2,
+    top = (window.innerHeight - height) / 2,
     bg = "white",
     text,
     justifyContent = "space-around",
@@ -35,10 +36,12 @@ function Modal(_ref) {
     display = "flex",
     alignItems = "center",
     flexDirection = "column",
+    opacity = "0.8",
     boxShadow,
     fontSize,
     color = "black"
   } = _ref;
+  console.log(left);
 
   if (show) {
     return /*#__PURE__*/_react.default.createElement(_container.default, {
@@ -46,12 +49,14 @@ function Modal(_ref) {
       height: height,
       bg: bg,
       left: left,
+      top: top,
       borderRadius: borderRadius,
       display: display,
       alignItems: alignItems,
       justifyContent: justifyContent,
       flexDirection: flexDirection,
-      boxShadow: boxShadow
+      boxShadow: boxShadow,
+      opacity: opacity
     }, /*#__PURE__*/_react.default.createElement(_image.default, {
       src: _check.default
     }), /*#__PURE__*/_react.default.createElement(_text.default, {

@@ -12,8 +12,9 @@ export default function Modal({
     title,
     img,
     width = window.innerWidth / 3,
-    height = window.innerHeight / 2,
-    left,
+    height = window.innerHeight / 2.1,
+    left = (window.innerWidth - width) / 2,
+    top = (window.innerHeight - height) / 2,
     bg = "white",
     text,
     justifyContent = "space-around",
@@ -21,37 +22,40 @@ export default function Modal({
     display = "flex",
     alignItems = "center",
     flexDirection = "column",
+    opacity = "0.8",
     boxShadow,
     fontSize,
     color = "black" }) {
-    
-      if (show) {
-            return (
-                <StyleContainer                   
-                    width={width}
-                    height={height}
-                    bg={bg}
-                    left={left}
-                    borderRadius={borderRadius}
-                    display={display}
-                    alignItems={alignItems}
-                    justifyContent={justifyContent}
-                    flexDirection={flexDirection}
-                    boxShadow={boxShadow}           
-                >
-                    <StyledImage src={check} />                         
-                    <StyledText
-                        fontSize={fontSize}
-                        color={color}>
-                        {text}
-                    </StyledText>
-                    <StyledButtonClose  onClick={(e) => {close()}}>
-                        Close
-                    </StyledButtonClose>
-                </StyleContainer>)
-           
-        }
-        if(close){return null}
-        else { return null }
-  
+
+    if (show) {
+        return (
+            <StyleContainer
+                width={width}
+                height={height}
+                bg={bg}
+                left={left}
+                top={top}
+                borderRadius={borderRadius}
+                display={display}
+                alignItems={alignItems}
+                justifyContent={justifyContent}
+                flexDirection={flexDirection}
+                boxShadow={boxShadow}
+                opacity={opacity}
+            >
+                <StyledImage src={check} />
+                <StyledText
+                    fontSize={fontSize}
+                    color={color}>
+                    {text}
+                </StyledText>
+                <StyledButtonClose onClick={(e) => { close() }} >
+                    Close
+                </StyledButtonClose>
+            </StyleContainer>)
+
+    }
+    if (close) { return null }
+    else { return null }
+
 }

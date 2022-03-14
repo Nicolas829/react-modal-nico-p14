@@ -41,7 +41,6 @@ function Modal(_ref) {
     fontSize,
     color = "black"
   } = _ref;
-  console.log(left);
 
   if (show) {
     return /*#__PURE__*/_react.default.createElement(_container.default, {

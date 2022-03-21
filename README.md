@@ -14,9 +14,12 @@ const [show, setShow]=useState(false)
 const openModal= ()=> setShow(true)
 const closeModal=()=> setShow(false)
 
-img              img of modal (checked img by default)
-show             show or not show modal (bolean)          
-width            width of the container = tierce of window width by default
+- img               
+img of modal (checked img by default)
+- show
+show or not show modal (bolean)          
+- width            
+width of the container = tierce of window width by default
 height           height of the container =  window height/2.1 by default
 left             position on x (center responsive by default)
 top              position on y (center responsive by default)
